@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAP session 1 - Basic layout</title>
+    <link rel="stylesheet" href="./project.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="main-container">
+    <header class="flex align-center justify-between1">
+      <h1>Web Topics</h1>
+      <div class="flex align-center gap-buttons">
+        <button class="btn btn-container">
+          <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" width="9" height="10" viewBox="0 0 512 512">
+            <path
+            d="M160 136c0-30.62 4.51-61.61 16-88C99.57 81.27 48 159.32 48 248c0 119.29 96.71 216 216 216 88.68 0 166.73-51.57 200-128-26.39 11.49-57.38 16-88 16-119.29 0-216-96.71-216-216z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
+          </svg>
+          Dark Mode
+        </button>
+        <button class="btn btn-container">
+          <!-- New heart-shaped SVG icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" width="9" height="10" viewBox="0 0 512 512" >
+            <path 
+            d="M352.92 80C288 80 256 144 256 144s-32-64-96.92-64c-52.76 0-94.54 44.14-95.08 96.81-1.1 109.33 86.73 187.08 183 252.42a16 16 0 0018 0c96.26-65.34 184.09-143.09 183-252.42-.54-52.67-42.32-96.81-95.08-96.81z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
+          </svg>
+          Favourite
+        </button>
+      </div>
+
+    </header>
+      <h2 class="flex justify-between2">Welcome to our website!</h2>
+      <p class="flex justify-between2">We have a new design that's fresh, modern, easy to use.</p>
+      
+      <main class="main">
+      <h3 class="flex"></h3>
+
+      <form class="input flex justify-between2">
+        <div class="search">
+          <svg xmlns="http://www.w3.org/2000/svg" class="search-icon" width="20" height="20" viewBox="0 0 512 512">
+            <path 
+            d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"/></svg>
+            <input class="search-input" type="search" placeholder="Search the website...">
+            
+            <ul class="flex justify-between2">
+              <li><a href="#">Sort by:<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" 
+                d="M112 184l144 144 144-144"/></svg></a>
+                <ul class="dropdown">
+                  <li><a href="#">Default</a></li>
+                  <li><a href="#">Newest</a></li>
+                </ul>
+              </li>
+              
+              <li><a href="#">Filterby:<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" 
+                d="M112 184l144 144 144-144"/></svg></a>
+                <ul class="dropdown">
+                  <li><a href="#">Default</a></li>
+                  <li><a href="#">Puplisher</a></li>
+                </ul>
+              </li>
+                
+            </ul>
+
+        </div>
+      </form>
+    </main>
+
+    
+    <footer class="flex justify-between2">
+      <p>Developed with <span class="heart">&#10084;</span> &copy; 2023</p>
+    </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+*{
+  margin:0;
+  font-family: 'Nunito Sans';
+}
+
+/*header styles*/
+h1{
+  font-size: 12px;
+  color:#0768AC;
+  
+}
+.ionicon{
+  vertical-align: text-bottom;
+}
+header{
+  padding: 8px 20px;
+  border-bottom:1px solid rgb(200, 193, 193);
+}
+.btn-container{
+  font-size: 9px;
+}
+
+/*main content*/
+h2{
+  font-size: 20px;
+  color: #03C180;
+}
+h3{
+  background-color: #DDDDDD;
+  /*min-height: calc(100vh - 101px);*/
+}
+.main-container{
+  display:flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.main{
+  flex-grow:1;
+  background-color:#F0F9FF
+}
+.search{
+  width: max-content;
+  display: flex;
+  align-items: center;
+  
+  border-radius: 4px;
+  background: #FFFFFF;
+  border:solid;
+  border-color:#DDDDDD;
+  border-width:thin;
+  padding-left: 7px;
+  /*padding-right: 640px;*/
+  padding-block: 4px;
+  width:1080px;
+}
+
+.search-input{
+  
+  font-size: 11px;
+  color: #333333;
+  outline: none;
+  border: none;
+  background: transparent;
+  margin-left: 10px;
+  width: 1040px;
+}
+.input{
+  padding-left: 40px;
+  padding-top: 10px;
+}
+.search-input::placeholder{
+  color:rgp(0,0,0,0.25)
+}
+.search-icon{
+  color:rgp(0,0,0,0.25)
+}
+
+
+ul{
+  list-style: none;
+  background:#FFFFFF
+}
+ul li{
+  display: inline-block;
+  position: relative;
+  border:solid;
+  border-color:#DDDDDD;;
+}
+ul li a{
+  display: block;
+  padding: 20px 60px;
+  color:#03C180;
+  text-decoration:none;
+  text-align:center;
+  font-size: 15px;
+}
+ul li ul.dropdown li{
+  display: block;
+}
+ul li ul.dropdown{
+  width:100%;
+  background:#0768AC;
+  position: absolute;
+  z-index:999;
+  display: none;
+}
+ul li a:hover{
+  background:red;
+  
+}
+ul li:hover ul.dropdown{
+  display: block;
+}
+
+
+/*footer style*/
+.heart {
+  color: red;        /* Red color for the heart */
+  font-size: 1.2em;  /* Slightly larger than regular text */
+}
+.main-container{
+  display:flex;
+}
+
+
+
+
+/*utility classes: are classes that we can use more than one time*/
+.flex{
+  display: flex;
+ 
+}
+.gap-buttons{
+  gap:5px;
+}
+.align-center{
+  align-items: center;
+}
+.justify-between1{
+  justify-content: space-between;
+ 
+}
+.justify-between2{
+  justify-content: center;
+}
