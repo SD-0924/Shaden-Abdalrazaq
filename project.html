@@ -4,16 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TAP session 1 - Basic layout</title>
+    <title>Home Page</title>
     <link rel="stylesheet" href="./project.css" />
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <script>
+    function toggleDarkTheme() {
+      document.body.classList.toggle('dark-theme');
+    }
+  </script>
   <div class="main-container">
     <header class="flex align-center justify-between1">
       <h1>Web Topics</h1>
       <div class="flex align-center gap-buttons">
-        <button class="btn btn-container">
+        <button class="btn btn-container" onclick="toggleDarkTheme()">
           <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" width="9" height="10" viewBox="0 0 512 512">
             <path
             d="M160 136c0-30.62 4.51-61.61 16-88C99.57 81.27 48 159.32 48 248c0 119.29 96.71 216 216 216 88.68 0 166.73-51.57 200-128-26.39 11.49-57.38 16-88 16-119.29 0-216-96.71-216-216z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
@@ -21,55 +26,711 @@
           Dark Mode
         </button>
         <button class="btn btn-container">
-          <!-- New heart-shaped SVG icon -->
+          
           <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" width="9" height="10" viewBox="0 0 512 512" >
             <path 
             d="M352.92 80C288 80 256 144 256 144s-32-64-96.92-64c-52.76 0-94.54 44.14-95.08 96.81-1.1 109.33 86.73 187.08 183 252.42a16 16 0 0018 0c96.26-65.34 184.09-143.09 183-252.42-.54-52.67-42.32-96.81-95.08-96.81z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
-          </svg>
+        </svg>
           Favourite
         </button>
       </div>
 
     </header>
+    
+    <div class="main-content">
+    <div class="triangles">
+      <div class="triangle-left">
+        <div class="triangle-right"></div>
+      </div>
+    </div> 
+
+    
       <h2 class="flex justify-between2">Welcome to our website!</h2>
       <p class="flex justify-between2">We have a new design that's fresh, modern, easy to use.</p>
-      
+    
+      <div class="input"></div>
       <main class="main">
-      <h3 class="flex"></h3>
+      
 
-      <form class="input flex justify-between2">
+      <form class="input flex justify-between2 ">
         <div class="search">
+          <div class="searching-icon-text flex">
           <svg xmlns="http://www.w3.org/2000/svg" class="search-icon" width="20" height="20" viewBox="0 0 512 512">
             <path 
             d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"/></svg>
             <input class="search-input" type="search" placeholder="Search the website...">
-            
-            <ul class="flex justify-between2">
-              <li><a href="#">Sort by:<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
-                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" 
-                d="M112 184l144 144 144-144"/></svg></a>
-                <ul class="dropdown">
-                  <li><a href="#">Default</a></li>
-                  <li><a href="#">Newest</a></li>
-                </ul>
-              </li>
-              
-              <li><a href="#">Filterby:<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
-                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" 
-                d="M112 184l144 144 144-144"/></svg></a>
-                <ul class="dropdown">
-                  <li><a href="#">Default</a></li>
-                  <li><a href="#">Puplisher</a></li>
-                </ul>
-              </li>
-                
-            </ul>
+          </div>
+            <div>
+            <div class="dropdown-container ">
+              <label for="sort">Sort by:</label>
+            <select class="sort">
+              <option>
+                Default
+              </option>
+              <option>
+                Top rated
+              </option>
+            </select>
+          </div>
+
+          <div class="dropdown-container">
+            <label for="filter">Filter by:</label>
+            <select class="filter">
+              <option>
+                Default
+              </option>
+              <option>
+                Puplisher
+              </option>
+            </select>
+            </div>
+          </div>
 
         </div>
       </form>
+      <h1 class="results">"24" Web Topics Found</h1>
+
+      <div class="course-container">
+      <div class="course-card">
+        <img src="images/html.png" alt="HTML Logo" class="course-image">
+        <div class="course-content">
+            <h3 class="course-title">Web Development Languages</h3>
+            <h1 class="language-name">HTML</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </p>
+
+            <p class="author flex">Author: Sarah Smith</p>
+            
+        </div>
+    </div>
+
+    <div class="course-card">
+      <img src="images/css.webp" alt="CSS LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Web Development Languages</h3>
+            <h1 class="language-name">CSS</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path d="M256 48v316L118 464l54-160-140-96h172l52-160z"/></svg>              
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </p>
+            <p class="author flex">Author: David Lee</p>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="images/javascript.jpg" alt="JavaScript LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Web Development Languages</h3>
+            <h1 class="language-name">JavaScript</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </p>
+            <p class="author flex">Author: Emily Chen</p>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="images/jquery.png" alt="jQuery LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Frontend Frameworks and Libraries</h3>
+            <h1 class="language-name">jQuery</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </p>
+            <p class="author flex">Author: John Johnson</p>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="images/angular.png" alt="Angular LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Frontend Frameworks and Libraries</h3>
+            <h1 class="language-name">Angular</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path d="M256 48v316L118 464l54-160-140-96h172l52-160z"/></svg>              
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </p>
+            <p class="author flex">Author: Jessica Davis</p>
+      </div>
+    </div>
+
+
+    <div class="course-card">
+      <img src="images/react.webp" alt="React LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Frontend Frameworks and Libraries</h3>
+            <h1 class="language-name">React</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </p>
+            <p class="author flex">Author: Daniel Brown</p>
+      </div>
+    </div>
+  
+
+    <div class="course-card">
+      <img src="images/vuejs.jpeg" alt="Vue.js LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Frontend Frameworks and Libraries</h3>
+            <h1 class="language-name">Vue.js</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path d="M256 48v316L118 464l54-160-140-96h172l52-160z"/></svg>              
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </p>
+            <p class="author flex">Author: Ava Jones</p>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="images/nodejs.webp" alt="Node.js LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Backend Frameworks and Libraries</h3>
+            <h1 class="language-name">Node.js</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </p>
+            <p class="author flex">Author: Micheal Kim</p>
+      </div>
+    </div>
+
+
+    <div class="course-card">
+      <img src="images/expressjs.webp" alt="Express.js LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Backend Frameworks and Libraries</h3>
+            <h1 class="language-name">Express.js</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </p>
+            <p class="author flex">Author: Sophia Rodriguez</p>
+      </div>
+    </div>
+
+    <div class="course-card">
+    <img src="images/ruby.jpeg" alt="Ruby on Rails LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Backend Frameworks and Libraries</h3>
+            <h1 class="language-name">Ruby on Rails</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </p>
+            <p class="author flex">Author: William Lee</p>
+      </div>
+    </div>
+
+
+    <div class="course-card">
+      <img src="images/django.jpeg" alt="Django LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Backend Frameworks and Libraries</h3>
+            <h1 class="language-name">Django</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </p>
+            <p class="author flex">Author: Olivia Martinez</p>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="images/flask.webp" alt="Flask LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Backend Frameworks and Libraries</h3>
+            <h1 class="language-name">Flask</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </p>
+            <p class="author flex">Author: Ethan Thompson</p>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="images/sql.png" alt="SQL LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Dahabases and APIs</h3>
+            <h1 class="language-name">SQL</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path d="M256 48v316L118 464l54-160-140-96h172l52-160z"/></svg>              
+              </p>
+            <p class="author flex">Author: Madison Davis</p>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="images/nosql.png" alt="NoSQL LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Databases and APIs</h3>
+            <h1 class="language-name">NoSQL</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path d="M256 48v316L118 464l54-160-140-96h172l52-160z"/></svg>              
+              </p>
+            <p class="author flex">Author: Isabella Wilson</p>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="images/restapi.jpeg" alt="REST APIs LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Dahabases and APIs</h3>
+            <h1 class="language-name">REST APIs</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </p>
+            <p class="author flex">Author: Jacob Garcia</p>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="images/graphql.png" alt="GraphQL LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Dahabases and APIs</h3>
+            <h1 class="language-name">GraphQL</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </p>
+            <p class="author flex">Author: Mila Brown</p>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="images/oauth.png" alt="OAuth LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Web Development Concept and T...</h3>
+            <h1 class="language-name">OAuth</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path d="M256 48v316L118 464l54-160-140-96h172l52-160z"/></svg>              
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </p>
+            <p class="author flex">Author: Evlyn Nguyen</p>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="images/json.png" alt="JSON LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Web Development Concepts and T...</h3>
+            <h1 class="language-name">JSON</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path d="M256 48v316L118 464l54-160-140-96h172l52-160z"/></svg>              
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </p>
+            <p class="author flex">Author: Liam Hernandez</p>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="images/ajax.gif" alt="AJAX LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Web Development Concepts and T...</h3>
+            <h1 class="language-name">AJAX</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </p>
+            <p class="author flex">Author: Avery Perez</p>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="images/websockets.png" alt="Websockets LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Web Development Concepts and T...</h3>
+            <h1 class="language-name">Websockets</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </p>            
+            <p class="author flex">Author: Victoria Kim</p>
+
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="images/responsive.gif" alt="Responsive Desing LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Web Development Concepts and T...</h3>
+            <h1 class="language-name">Responsive Design</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </p>            
+            <p class="author flex">Author: Ryan Jones</p>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="images/accessibility.png" alt="Accessibility LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Web Development Concepts and T...</h3>
+            <h1 class="language-name">Accessibility</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </p>
+            <p class="author flex">Author: Samantha Martin</p>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="images/ux.jpeg" alt="User Experience(UX) LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Web Development Concepts and T...</h3>
+            <h1 class="language-name">User Experience (UX)</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </p>
+            <p class="author flex">Author: Luke Davis</p>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="images/ui.png" alt="User Experience (UI) LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Web Development Concepts and T...</h3>
+            <h1 class="language-name">User Experience (UI)</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </p>
+            <p class="author flex">Author: Grace Wilson</p>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="images/design-systems.jpeg" alt="Design Systems LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Web Development Concepts and T...</h3>
+            <h1 class="language-name">Design Systems</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </p>
+            <p class="author flex">Author: Noah Martinez</p>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="images/performance.png" alt="Performance Optimization LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Web Development Concepts and T...</h3>
+            <h1 class="language-name">Permormance Optimization</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path d="M256 48v316L118 464l54-160-140-96h172l52-160z"/></svg>              
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </p>
+            <p class="author flex">Author: Chloe Taylor</p>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="images/cross-browser.jpeg" alt="Cross-Browser Compatibility LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Web Development Concepts and T...</h3>
+            <h1 class="language-name">Cross-Browser Compatibility</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path d="M256 48v316L118 464l54-160-140-96h172l52-160z"/></svg>              
+              </p>
+            <p class="author flex">Author: David Lee</p>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="images/seo.jpeg" alt="Search Engine Optimization (SEO) LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Web Development Concepts and T...</h3>
+            <h1 class="language-name">Search Engine Optimization (SEO)</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </p>
+            <p class="author flex">Author: Emily Kim</p>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="images/web-security.jpeg" alt="Web Security LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Web Development Concepts and T...</h3>
+            <h1 class="language-name">Web Security</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </p>
+            <p class="author flex">Author: Gabriel Hernandez</p>
+      </div>
+    </div>
+    
+
+    <div class="course-card">
+      <img src="images/testing.jpeg" alt="Testing and Debugging LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Web Development Concepts and T...</h3>
+            <h1 class="language-name">Testing and Debugging</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path d="M256 48v316L118 464l54-160-140-96h172l52-160z"/></svg>              
+            </p>
+            <p class="author flex">Author: Avery Perez</p>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="images/ci-cd.jpeg" alt="Continuous Integration/Continuous Deploy LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Web Development Concepts and T...</h3>
+            <h1 class="language-name">Continuous Integration/Continuous...</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </p>
+            <p class="author flex">Author: Madison Davis</p>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="images/devops.png" alt="DevOps LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Web Development Concepts and T...</h3>
+            <h1 class="language-name">DevOps</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </p>
+            <p class="author flex">Author: Isabella Wilson</p>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="images/cloud.jpeg" alt="Cloud Computing LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Web Development Concepts and T...</h3>
+            <h1 class="language-name">Cloud Computing</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </p>
+            <p class="author flex">Author: Jacob Garcia</p>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="images/docker.png" alt="Docker LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Web Development Concepts and T...</h3>
+            <h1 class="language-name">Docker</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </p>
+            <p class="author flex">Author: Mia Brown</p>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="images/microservices.png" alt="MIcroservices LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Web Development Concepts and T...</h3>
+            <h1 class="language-name">Microservices</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </p>
+            <p class="author flex">Author: Evelyn Nguyen</p>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="images/pwa.png" alt="Progressive Web Apps (PWA) LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Web Development Concepts and T...</h3>
+            <h1 class="language-name">Progressive Web Apps (PWA)</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </p>
+            <p class="author flex">Author: Liam Hernandez</p>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="images/wai.jpeg" alt="Web Accessibility Initiative (WAI) LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Web Development Concepts and T...</h3>
+            <h1 class="language-name">Web Accessibility Initiative (WAI)</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path d="M256 48v316L118 464l54-160-140-96h172l52-160z"/></svg>              
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </p>
+            <p class="author flex">Author: Avery Perez</p>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="images/cms.png" alt="Content Managment Systems (CMS) LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Web Development Concepts and T...</h3>
+            <h1 class="language-name">Content Management Systems (CMS)</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </p>
+            <p class="author flex">Author: Victoria Kim</p>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="images/analytics.png" alt="Web Analytics LOGO" class="course-image">
+      <div class="course-content">
+        <h3 class="course-title">Web Development Concepts and T...</h3>
+            <h1 class="language-name">Web Analytics</h1>
+            <p class="rating flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </p>
+            <p class="author flex">Author: Ryan Jones</p>
+      </div>
+    </div>
+
+  </div>
+
+      </div>
+      
+      </div>
+      
     </main>
 
-    
     <footer class="flex justify-between2">
       <p>Developed with <span class="heart">&#10084;</span> &copy; 2023</p>
     </footer>
