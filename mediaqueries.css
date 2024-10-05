@@ -1,0 +1,97 @@
+/*Media Queries*/
+
+
+/* Mobile screens (320px - 480px) */
+@media screen and (max-width: 480px) {
+    h1 {
+      font-size: 10px;
+      
+    }
+    h2 {
+      font-size: 16px;
+      
+    }
+    .search {
+      max-width: 300px;
+    }
+    .course-container {
+      grid-template-columns: repeat(1, 1fr); /* One card per row */
+      gap:20px;
+      
+    }
+    .results {
+      padding-left: 10px;
+      
+    }
+  
+  }
+  
+  /* (481px - 768px) */
+  @media screen and (max-width: 768px) {
+    .dropdown-container {
+      height: 45px; 
+    }
+    h1 {
+      font-size: 11px;
+    }
+    h2 {
+      font-size: 18px;
+      
+    }
+    .search {
+      max-width: 500px;
+    }
+    .course-container {
+      grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+      gap:20px;
+    }
+    .results {
+      padding-left: 20px;
+    }
+  }
+  
+  /*  (769px - 1024px) */
+  @media screen and (max-width: 1024px) {
+    h1 {
+      font-size: 12px;
+    }
+    h2 {
+      font-size: 20px;
+      
+    }
+    .search {
+      max-width: 800px;
+    }
+    .course-container {
+      grid-template-columns: repeat(3, 1fr); /* Three cards per row */
+      
+    }
+  
+  }
+  
+  /* (1025px - 1440px) */
+  @media screen and (max-width: 1440px) {
+   
+    .search {
+      max-width: 800px;
+    }
+    .course-container {
+      grid-template-columns: repeat(4, 1fr); /* Four cards per row */
+      
+    }
+    
+    
+  }
+  
+  /*  (1441px - 1920px+) */
+  @media screen and (min-width: 1441px) {
+  
+    .search {
+      max-width: 1400px;
+    }
+    .course-container {
+      grid-template-columns: repeat(5, 1fr); /* Five cards per row */
+      
+    }
+    
+  }

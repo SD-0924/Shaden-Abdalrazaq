@@ -139,8 +139,9 @@ h2{
   
 }
 .input{
-  padding-left: 40px;
+  margin: 0 auto;
   padding-top: 40px;
+  width:75%
 }
 .search-input::placeholder{
   color: rgba(0,0,0,0.25);
@@ -196,7 +197,7 @@ select {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 16px;
   margin: 16px;
-  width: 100%;
+  width: 90%;
   text-align: center;
   transition: transform 0.2s ease;
 }
@@ -208,7 +209,7 @@ select {
 /* Course image styling */
 .course-image {
   max-width: 100%;
-  height: 150px;
+  height:150px;
   border-radius: 4px;
 }
 
@@ -251,7 +252,7 @@ select {
   grid-template-columns: repeat(5, 1fr);
   max-width: 1440px;
   margin:0 auto;
-  gap:30px;
+  gap:20px;
 }
 
 .stars{
@@ -269,6 +270,7 @@ select {
 .main-container{
   display:flex;
 }
+
 
 
 
@@ -299,100 +301,124 @@ select {
   margin:auto;
 }
 
-/*Media Queries*/
 
 
-/* Mobile screens (320px - 480px) */
-@media screen and (max-width: 480px) {
-  h1 {
-    font-size: 10px;
-    
-  }
-  h2 {
-    font-size: 16px;
-    
-  }
-  .search {
-    max-width: 300px;
-  }
-  .course-container {
-    grid-template-columns: repeat(1, 1fr); /* One card per row */
-    gap:20px;
-    
-  }
-  .results {
-    padding-left: 10px;
-    
-  }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+.press-on-card{
+  text-decoration: none;
 }
 
-/* (481px - 768px) */
-@media screen and (max-width: 768px) {
-  .dropdown-container {
-    height: 45px; 
-  }
-  h1 {
-    font-size: 11px;
-  }
-  h2 {
-    font-size: 18px;
-    
-  }
-  .search {
-    max-width: 500px;
-  }
+
+
+
+
+
+
+
+
+/* 4 cards per row */
+@media (max-width: 1200px) {
   .course-container {
-    grid-template-columns: repeat(2, 1fr); /* Two cards per row */
-    gap:20px;
+    grid-template-columns: repeat(4, 1fr); 
   }
-  .results {
-    padding-left: 20px;
+  .course-card {
+    padding: 14px;
+    margin: 14px;
   }
 }
 
-/*  (769px - 1024px) */
-@media screen and (max-width: 1024px) {
-  h1 {
-    font-size: 12px;
-  }
-  h2 {
-    font-size: 20px;
-    
-  }
-  .search {
-    max-width: 800px;
-  }
+/* For screens smaller than 992px (3 cards per row) */
+@media (max-width: 992px) {
   .course-container {
-    grid-template-columns: repeat(3, 1fr); /* Three cards per row */
-    
+    grid-template-columns: repeat(3, 1fr); 
   }
-
+  .course-card {
+    padding: 12px; 
+    margin: 12px;
+    box-shadow: none;
+  }
+  .input{
+    width:90%
+  }
 }
 
-/* (1025px - 1440px) */
-@media screen and (max-width: 1440px) {
- 
-  .search {
-    max-width: 800px;
-  }
+/* For screens smaller than 768px (2 cards per row) */
+@media (max-width: 768px) {
   .course-container {
-    grid-template-columns: repeat(4, 1fr); /* Four cards per row */
-    
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  .course-card {
+    padding: 8px;  
+    margin: 8px;
+    font-size: 14px;
+   
+  }
+  .input{
+    width:90%
+  }
+  .search{
+    display:grid;
+    height:90%;
+    grid-template-rows: 1fr 2fr;
+  }
+  .dropdown-container{
+    width: 40%;
+    border: 1px solid #ccc;
+    margin:none;
   }
   
+  .dropdown-menues{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 2px;
   
+  }
+  .sort{
+    width:150px;
+    padding-left: 0;
+  }
+  .filter{
+    width: 50vw;
+  }
+  .option{
+    border: 1px solid #c21111;
+  }
 }
 
-/*  (1441px - 1920px+) */
-@media screen and (min-width: 1441px) {
-
-  .search {
-    max-width: 1400px;
-  }
+/* For screens smaller than 576px (1 card per row) */
+@media (max-width: 576px) {
   .course-container {
-    grid-template-columns: repeat(5, 1fr); /* Five cards per row */
+    grid-template-columns: 1fr; 
+  }
+  .course-card {
+    padding: 4px; 
+    margin: 7px;
+    font-size: 12px; 
+    border-radius: 4px; 
     
   }
-  
+  .input{
+    width:90%
+  }
+  .search{
+    display:grid;
+    height:90%
+  }
+  .dropdown-container{
+    width: 40%;
+  }
 }
+
