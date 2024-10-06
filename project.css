@@ -158,9 +158,9 @@ h2{
   
 }
 .input{
-  margin: 0 auto;
+  margin:0 16px;
   padding-top: 40px;
-  width:75%
+  
 }
 .search-input::placeholder{
   color: rgba(0,0,0,0.25);
@@ -192,7 +192,6 @@ label {
 }
 
 select {
-  width: 200px;
   border: none; 
  
 }
@@ -201,8 +200,8 @@ select {
 .results{
   font-size: 22px;
   color: var();
-  margin:30px;
-  padding-left: 225px;
+  margin:30px 16px;
+  
 }
 
 
@@ -214,9 +213,8 @@ select {
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 16px;
-  margin: 16px;
-  width: 90%;
+  object-fit: contain;
+  
   text-align: center;
   transition: transform 0.2s ease;
 }
@@ -227,9 +225,13 @@ select {
 
 /* Course image styling */
 .course-image {
-  max-width: 100%;
+  width: 100%;
   height:150px;
   border-radius: 4px;
+  object-fit: cover;
+}
+.course-content{
+  padding:12px;
 }
 
 /* Course title styling */
@@ -269,8 +271,8 @@ select {
 .course-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  max-width: 1440px;
-  margin:0 auto;
+ 
+  margin:0 16px;
   gap:20px;
 }
 
@@ -353,9 +355,8 @@ select {
   .course-container {
     grid-template-columns: repeat(4, 1fr); 
   }
-  .course-card {
-    padding: 14px;
-    margin: 14px;
+  .course-content{
+    padding:13px;
   }
 }
 
@@ -365,12 +366,15 @@ select {
     grid-template-columns: repeat(3, 1fr); 
   }
   .course-card {
-    padding: 12px; 
-    margin: 12px;
     box-shadow: none;
   }
-  .input{
-    width:90%
+  
+  .course-content{
+    padding:13px;
+  }
+  .dropdown-menues{
+    display: flex;
+  
   }
 }
 
@@ -379,24 +383,35 @@ select {
   .course-container {
     grid-template-columns: repeat(2, 1fr); 
   }
+  .course-content{
+    padding:13px;
+  }
   .course-card {
-    padding: 8px;  
-    margin: 8px;
     font-size: 14px;
    
   }
-  .input{
-    width:90%
-  }
+  
   .search{
-    display:grid;
+    display:flex;
+    flex-direction: column;
     height:90%;
-    grid-template-rows: 1fr 2fr;
+    padding:0;
   }
   .dropdown-container{
-    width: 40%;
-    border: 1px solid #ccc;
+    width: 50%;
+    border:none;
+    border-top:1px solid var(--lines-color);
+    padding-left:16px;
     margin:none;
+    
+  }
+  .filter{
+    width:100%;
+    
+  }
+  .sort{
+    width:100%;
+    
   }
   .welcome-color{
     font-size:25px;
@@ -410,26 +425,29 @@ select {
     align-items: center; /* Aligns the text horizontally to the center */
     padding: 20px; /* Optional, to add space around the text */
   }
+  .dropdown-container-border-left{
+    border-left:1px solid var(--lines-color);
+  }
   
   .container-welcome {
     max-width: 800px; /* Define a max width for the text block */
     text-align: left; /* Ensure that text aligns to the left */
     margin: 0 auto; /* Center the block */
   }
+  .searching-icon-text{
+    width:100%;
+    padding:10px;
+  }
   
   .dropdown-menues{
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-    gap: 2px;
+    display: flex;
+    width:100% 
   
   }
   .sort{
-    width:150px;
     padding-left: 0;
   }
-  .filter{
-    width: 50vw;
-  }
+  
   .option{
     border: 1px solid #c21111;
   }
@@ -441,21 +459,26 @@ select {
     grid-template-columns: 1fr; 
   }
   .course-card {
-    padding: 4px; 
-    margin: 7px;
+   
     font-size: 12px; 
     border-radius: 4px; 
     
   }
+  .course-content{
+    padding:7px;
+  }
   .input{
     width:90%
   }
-  .search{
-    display:grid;
-    height:90%
-  }
+  
   .dropdown-container{
-    width: 40%;
+    width: 50%;
   }
+  .dropdown-menues{
+    display: flex;
+    width:100% 
+  
+  }
+ 
 }
 

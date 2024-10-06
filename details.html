@@ -16,6 +16,15 @@
     function toggleDarkTheme() {
       document.body.classList.toggle('dark-theme');
     }
+    function toggleFavouriteBar(){
+      const fav=document.getElementById("fav-container")
+      if(fav.style.display==="block"){
+        fav.style.display= "none"
+      }
+      else{
+        fav.style.display= "block"
+      }
+    }
   </script>
   <div class="main-container">
     <header class="flex align-center justify-between1">
@@ -31,7 +40,7 @@
           Dark Mode
         </button>
 
-        <button class="btn-container">
+        <button class="btn-container" onclick="toggleFavouriteBar()">
           
           <svg xmlns="http://www.w3.org/2000/svg" class="heart-top-icon" width="21" height="17" viewBox="0 0 512 512" >
             <path 
@@ -80,7 +89,34 @@
          static web pages and is a foundational technology for the World Wide Web.
       </p>
     </div>
+    <div class="course-card">
+      <img src="images/html.png" alt="HTML Logo" class="course-image">
+
+      <div class="course-content">
+
+        <div class="flex authors-container">
+          <h3 class="authors-intro">HTML by</h3>
+          <h3 class="author">Sarah Smith</h3>
+        </div>
+
+          <div class="favourite-box">
+            
+            <p class="flex justify-between2">Interested about this topic?</p>
+            
+            <div class="add-to-favoutire-box">
+            <h2 class="flex justify-between2 ">Add to Favoutires </h2>
+            <svg xmlns="http://www.w3.org/2000/svg" class="heart-icon" width="20px" viewBox="0 0 512 512"><path d="M352.92 80C288 80 256 144 256 144s-32-64-96.92-64c-52.76 0-94.54 44.14-95.08 96.81-1.1 109.33 86.73 187.08 183 252.42a16 16 0 0018 0c96.26-65.34 184.09-143.09 183-252.42-.54-52.67-42.32-96.81-95.08-96.81z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+            </div>
+
+            <p class="flex justify-between2 unlimited-credits">Unlimited Credits</p>
+          </div>
+        </div>
+    </div><!--This is the end of course card container-->
   </div>
+
+ 
+        
+    
 </div><!--This is the end of the container that holds the background color-->
 
 <div class="diagram">
@@ -116,32 +152,7 @@
 
 
 
-      <div class="course-container">
-        
-      <div class="course-card">
-        <img src="images/html.png" alt="HTML Logo" class="course-image">
-
-        <div class="course-content">
-
-          <div class="flex authors-container">
-            <h3 class="authors-intro">HTML by</h3>
-            <h3 class="author">Sarah Smith</h3>
-          </div>
-
-            <div class="favourite-box">
-              
-              <p class="flex justify-between2">Interested about this topic?</p>
-              
-              <div class="add-to-favoutire-box">
-              <h2 class="flex justify-between2 ">Add to Favoutires </h2>
-              <svg xmlns="http://www.w3.org/2000/svg" class="heart-icon" width="20px" viewBox="0 0 512 512"><path d="M352.92 80C288 80 256 144 256 144s-32-64-96.92-64c-52.76 0-94.54 44.14-95.08 96.81-1.1 109.33 86.73 187.08 183 252.42a16 16 0 0018 0c96.26-65.34 184.09-143.09 183-252.42-.54-52.67-42.32-96.81-95.08-96.81z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
-              </div>
-
-              <p class="flex justify-between2 unlimited-credits">Unlimited Credits</p>
-            </div>
-          </div>
-        </div>
-      </div><!--This is the end of course card container-->
+      
 
 
 
@@ -152,8 +163,90 @@
       
     </main>
     
-
-    <footer class="flex justify-between2">
+    <div class="fav-container" id="fav-container">
+      <h3>My favourite topics </h3>
+      <div class="fav-cards">
+        <div class="fav-card">
+          <img class="fav-card-image" src="images/accessibility.png" alt="accessibility">
+          <div class="fav-card-content">
+            <div>Accessibility</div>
+            <div class="stars-icons">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="fav-card">
+          <img class="fav-card-image" src="images/accessibility.png" alt="accessibility">
+          <div class="fav-card-content">
+            <div>Accessibility</div>
+            <div class="stars-icons">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="fav-card">
+          <img class="fav-card-image" src="images/accessibility.png" alt="accessibility">
+          <div class="fav-card-content">
+            <div>Accessibility</div>
+            <div class="stars-icons">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="fav-card">
+          <img class="fav-card-image" src="images/accessibility.png" alt="accessibility">
+          <div class="fav-card-content">
+            <div>Accessibility</div>
+            <div class="stars-icons">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="fav-card">
+          <img class="fav-card-image" src="images/accessibility.png" alt="accessibility">
+          <div class="fav-card-content">
+            <div>Accessibility</div>
+            <div class="stars-icons">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="fav-card">
+          <img class="fav-card-image" src="images/accessibility.png" alt="accessibility">
+          <div class="fav-card-content">
+            <div>Accessibility</div>
+            <div class="stars-icons">
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width=25px class="rating" viewBox="0 0 512 512"><path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+          <footer class="flex justify-between2">
       <p>Developed with <span class="heart">&#10084;</span> &copy; 2023</p>
     </footer>
     </div>
