@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./project.css" />
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <script>
     function toggleDarkTheme() {
@@ -16,10 +17,10 @@
   </script>
   <div class="main-container">
     <header class="flex align-center justify-between1">
-      <h1>Web Topics</h1>
+      <h1 class="web-topics">Web Topics</h1>
       <div class="flex align-center gap-buttons">
         <button class="btn btn-container" onclick="toggleDarkTheme()">
-          <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" width="9" height="10" viewBox="0 0 512 512">
+          <svg xmlns="http://www.w3.org/2000/svg" class="moon-icon" width="21" height="17" viewBox="0 0 512 512">
             <path
             d="M160 136c0-30.62 4.51-61.61 16-88C99.57 81.27 48 159.32 48 248c0 119.29 96.71 216 216 216 88.68 0 166.73-51.57 200-128-26.39 11.49-57.38 16-88 16-119.29 0-216-96.71-216-216z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
           </svg>
@@ -27,7 +28,7 @@
         </button>
         <button class="btn btn-container">
           
-          <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" width="9" height="10" viewBox="0 0 512 512" >
+          <svg xmlns="http://www.w3.org/2000/svg" class="heart-top-icon"width="21" height="17" viewBox="0 0 512 512" >
             <path 
             d="M352.92 80C288 80 256 144 256 144s-32-64-96.92-64c-52.76 0-94.54 44.14-95.08 96.81-1.1 109.33 86.73 187.08 183 252.42a16 16 0 0018 0c96.26-65.34 184.09-143.09 183-252.42-.54-52.67-42.32-96.81-95.08-96.81z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
         </svg>
@@ -43,11 +44,13 @@
         <div class="triangle-right"></div>
       </div>
     </div> 
-
-    
-      <h2 class="flex justify-between2">Welcome to our website!</h2>
+      <div class="welcome">
+      <div class="container-welcome">
+      <h2 class="flex justify-between2 welcome-color">Welcome to our website!</h2>
       <p class="flex justify-between2">We have a new design that's fresh, modern, easy to use.</p>
-    
+       </div>
+      </div>
+
       <div class="input"></div>
       <main class="main">
       
@@ -91,7 +94,7 @@
       <h1 class="results">"24" Web Topics Found</h1>
 
       <div class="course-container">
-        <a href="hello-world.html" class="press-on-card">
+        <a href="details.html" class="press-on-card">
       <div class="course-card">
         <img src="images/html.png" alt="HTML Logo" class="course-image">
         <div class="course-content">

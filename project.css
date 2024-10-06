@@ -48,12 +48,31 @@ h1{
 .ionicon{
   vertical-align: text-bottom;
 }
+.btn-container{
+  font-size: 15px;
+  display: flex;
+  padding-right: 9px;
+  padding-left: 9px;
+  padding-top: 3px;;
+  border:1px solid var(--lines-color);
+  border-radius: 2px;
+  align-items: center;
+  justify-content:space-evenly;
+
+}
+.moon-icon{
+  padding-right:6px;
+}
+.heart-top-icon{
+  padding-right:6px;
+}
+.web-topics{
+  font-weight: bold;
+  font-size: 25px;
+}
 header{
   padding: 8px 20px;
   border-bottom:1px solid rgb(200, 193, 193);
-}
-.btn-container{
-  font-size: 9px;
 }
 
 /*main content*/
@@ -378,6 +397,24 @@ select {
     width: 40%;
     border: 1px solid #ccc;
     margin:none;
+  }
+  .welcome-color{
+    font-size:25px;
+    color:var(--body-text);
+
+  }
+  .welcome {
+    display: flex;
+    flex-direction: column; /* Stacks the elements vertically */
+    justify-content: center; /* Centers the content vertically */
+    align-items: center; /* Aligns the text horizontally to the center */
+    padding: 20px; /* Optional, to add space around the text */
+  }
+  
+  .container-welcome {
+    max-width: 800px; /* Define a max width for the text block */
+    text-align: left; /* Ensure that text aligns to the left */
+    margin: 0 auto; /* Center the block */
   }
   
   .dropdown-menues{
