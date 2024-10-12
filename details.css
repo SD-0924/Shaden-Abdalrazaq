@@ -55,13 +55,13 @@
   .btn-container{
     font-size: 15px;
     display: flex;
-    padding-right: 9px;
-    padding-left: 9px;
-    padding-top: 3px;;
+    padding:3px 9px 0 9px;
     border:1px solid var(--lines-color);
     border-radius: 2px;
     align-items: center;
     justify-content:space-evenly;
+    background-color: var(--bg_default);
+    color: var(--body-text)
 
   }
  .moon-icon{
@@ -74,6 +74,7 @@
  .web-topics{
     font-weight: bold;
     font-size: 25px;
+    
  }
   /*main content*/
   .triangles{
@@ -97,18 +98,16 @@
       border-bottom: 80px solid transparent;
     opacity:0.9;
   }
-  
-  .intro{
-   padding-left: 50px;
-    
-  }
+
   .html-word{
     
     font-size:20px;
     font-weight:bold;
-    color:var(--bg_default);
+    color:#FFFFFF;
   }
-  
+  .white-typing{
+    color:#FFFFFF
+  }
   
   
   .main-content{
@@ -119,6 +118,8 @@
     display:flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: var(--bg_default);
+    
   }
   :root{
     --content-max-width:1900px;
@@ -129,88 +130,15 @@
     margin:0 auto;
     
   }
-  .search{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 4px;
+  .blue-background{
     background-color: var(--bg_default);
-    border: 1px solid var(--lines-color);
-    border-width:thin;
-    
-    height:60px;
-    padding: 10px;
-    
   }
-  
-  .search-input{
-    
-    font-size: 11px;
-    color: var(--body-text);
-    outline: none;
-    border: none;
-    background: transparent;
-    margin-left: 10px;
-    width:100%;
-   
-    
-    
-  }
-  .input{
-    margin: 0 auto;
-    padding-top: 40px;
-    width:75%
-  }
-  .search-input::placeholder{
-    color: rgba(0,0,0,0.25);
-  
-  }
-  .search-icon{
-    color:rgba(0,0,0,0.25);
-  
-    margin:auto;
-  }
-  
-  
-  .dropdown-container {
-    display: inline-block;
-    border: 1px solid #ccc;
-    padding: 8px; 
-    border-radius: 0px;
-    height:55px;
-    border-bottom: none;
-    border-top: none;
-    border-right: none;
-    
-  }
-  label {
-    display: block; 
-    margin-bottom: 0px; 
-    font-size: small;
-   
-  }
-  
-  select {
-    width: 200px;
-    border: none; 
-   
-  }
-  
-  
-  .results{
-    font-size: 22px;
-    color: var();
-    margin:30px;
-    padding-left: 225px;
-  }
-  
-  
+
   
   
   /* General card styling */
   .course-card {
-    background-color: var(--bg_default);
+    background-color:#FFFFFF;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -238,19 +166,15 @@
   /* Course title styling */
   .course-title {
     font-size: 13px;
-    color: #333;
     display: flex;
     justify-content: left;
     
   }
-  .language-name{
-    font-size: 15px;
-    color:var(--body-text);
-    
-    display: flex;
-    justify-content: flex-start;
-    font-weight: bold;
-  }
+
+  #course-description{
+    color:#FFFFFF
+    }
+ 
   
   /* Author name styling */
  
@@ -265,7 +189,7 @@
   }
   .container {
     padding: 15px 20%;
-  
+    
   }
   
   .text-container {
@@ -292,6 +216,7 @@
 }
 .welcome-color{
     color:var(--brand-secondary);
+    
     font-weight: bold;
     font-size: 25px;
     
@@ -302,13 +227,14 @@
     justify-content: center; 
     align-items: start; 
     padding: 20px;
+    background-color: var(--bg_default);
   }
   
   .container-welcome {
     max-width: 800px; 
     text-align: left; 
     margin: 0 auto; 
-
+    
   }
 
 .main-item{
@@ -321,8 +247,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;/* this is the whole diagram to be in the center of the page*/
+    background-color: var(--bg_body);
+    color:var(--body-text)
     
     
+}
+.subTopics{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:100%;
 }
 .item{
     padding-left: 20px;
@@ -355,12 +289,13 @@
     margin-top: 10px;
     margin-bottom: 5px;
     padding:10px;
-    color:var(--bg_body);
+    color:#FFFFFF;
     display:flex;
     justify-content: space-evenly;
+    cursor: pointer;
 }
 .heart-icon{
-    color: var(--bg_body);
+    color: #FFFFFF;
 }
 .unlimited-credits{
     font-size:10px;
@@ -408,7 +343,7 @@
     justify-content: center;
   }
   .background-color{
-    background-color: var(--body-text);
+    background-color: #333333;
     position:relative;
   }
  
@@ -534,6 +469,7 @@
     .sort{
       width:150px;
       padding-left: 0;
+      color: var(--body-text)
     }
     .filter{
       width: 50vw;
@@ -541,6 +477,8 @@
     .option{
       border: 1px solid #c21111;
     }
+  
+
   }
   
   /* For screens smaller than 576px (1 card per row) */
@@ -567,4 +505,36 @@
     }
   }
   
+  @media (max-width:400px) {
+    .btn-container {
+      font-size: 0;
+    }
+  
+    .btn-container svg {
+      font-size: initial;
+      /* Keep the icon size intact */
+    }
+        .diagram {
+          width: 90%;
+          /* Make the diagram wider */
+          margin: 0 auto;
+          /* Center it */
+        }
+    
+        .subTopics {
+          font-size: 1.2rem;
+          /* Increase font size */
+        }
+    
+        .html-sub-topics-container {
+          padding: 20px;
+          /* Increase padding for more space */
+        }
+    
+        .check-icon {
+          width: 30px;
+          /* Make the icons bigger */
+        }
+  }
+
   
